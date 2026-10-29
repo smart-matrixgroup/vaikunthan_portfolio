@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const PHONE_LK = '+94 77 515 8810'
 const PHONE_UAE = '+971 56 798 6455'
-const EMAIL = 'Vaikunthan@gmail.com'
+const EMAIL = 'vaikunthank@gmail.com'
 const FB = 'https://www.facebook.com/kvaikunthan'
 const digits = s => s.replace(/[^\d+]/g, '')
 

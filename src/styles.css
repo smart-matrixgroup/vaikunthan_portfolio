@@ -3,7 +3,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-tap-highlight-color:transparent;overflow-x:hidden}
 a{cursor:pointer}
-.wrap{width:min(1180px,100%);margin:0 auto;padding:0 20px}
+.wrap{width:min(1300px,100%);margin:0 auto;padding:0 20px}
 .site{padding-bottom:0}
 /* top bar */
 .top{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top);transition:.3s}
@@ -394,20 +394,37 @@ h1 em{background:linear-gradient(100deg,#b8821f 20%,#ffe39a 45%,#d9a441 60%,#b88
     mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
   }
 }
-/* ===== Align hero right side with the same container edge as the left text (desktop) ===== */
+/* ===== Hero: equal margins left & right (desktop) ===== */
 @media (min-width: 900px) {
-
   .art {
-    /* container eke dakunu edge eka = header / text eka samaga */
-    --edge: max(20px, calc((100% - 1180px) / 2 + 20px));
+    --wrap-w: 1500px;   /* line 6 eke .wrap width ekatama samana wenna one */
+    --edge: max(20px, calc((100% - var(--wrap-w)) / 2 + 20px));
   }
 
-  /* Person: container eke dakunu edge ekata */
-  .art > .art-person {
-    right: var(--edge);
+  /* Person + chips: text ekata langata */
+  .art > .art-person,
+  .art .art-person {
+    right: calc(var(--edge) + 120px) !important;
+    left: auto !important;
   }
+  .art .c1, .fchip.c1 { right: calc(var(--edge) + 100px) !important; }
+  .art .c2, .fchip.c2 { right: calc(var(--edge) + 60px) !important; }
 
-  /* Chips: dakunu edge ekata */
-  .c1 { right: var(--edge); }
-  .c2 { right: var(--edge); }
+  /* Dakunu paththe dark margin */
+  .art::after {
+    background:
+      linear-gradient(270deg, #050f1f 0, #050f1f calc(var(--edge) * .55), transparent calc(var(--edge) + 90px)),
+      linear-gradient(90deg, #050f1f 0%, #050f1fee 28%, #0b1f3a99 50%, transparent 78%),
+      linear-gradient(to top, #050f1f 0%, transparent 25%) !important;
+  }
+}
+/* ===== Stat cards: gold border ===== */
+.stat {
+  border: 5px solid var(--gold);
+  box-shadow: 0 10px 30px #0000001a, 0 0 18px #d9a44133;   /* podi gold glow ekak */
+  transition: transform .3s, box-shadow .3s;
+}
+.stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px #00000026, 0 0 26px #d9a44166;
 }
