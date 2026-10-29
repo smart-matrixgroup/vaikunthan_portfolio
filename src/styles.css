@@ -394,3 +394,20 @@ h1 em{background:linear-gradient(100deg,#b8821f 20%,#ffe39a 45%,#d9a441 60%,#b88
     mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
   }
 }
+/* ===== Align hero right side with the same container edge as the left text (desktop) ===== */
+@media (min-width: 900px) {
+
+  .art {
+    /* container eke dakunu edge eka = header / text eka samaga */
+    --edge: max(20px, calc((100% - 1180px) / 2 + 20px));
+  }
+
+  /* Person: container eke dakunu edge ekata */
+  .art > .art-person {
+    right: var(--edge);
+  }
+
+  /* Chips: dakunu edge ekata */
+  .c1 { right: var(--edge); }
+  .c2 { right: var(--edge); }
+}
