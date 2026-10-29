@@ -143,9 +143,10 @@ export default function App() {
             </div>
           </div>
         </div>
-       <div className="art">
- <img className="art-bg" src={import.meta.env.BASE_URL + "hero-bg.jpg"} alt="" />
-<img className="art-person" src={import.meta.env.BASE_URL + "person.png"} alt="K. Vaikunthan" />
+       
+    <div className="art">
+  <img className="art-bg" src={import.meta.env.BASE_URL + "hero-bg.webp"} alt="" fetchpriority="high" />
+  <img className="art-person" src={import.meta.env.BASE_URL + "person.webp"} alt="K. Vaikunthan" fetchpriority="high" width="949" height="760" />
   <span className="fchip c1">🏢 Real Estate</span>
 <span className="fchip c2">☀️ Solar Energy</span>
 <span className="fchip c3">🌍 Dubai · Lanka</span>
@@ -177,8 +178,8 @@ export default function App() {
             ))}
           </div>
           <Reveal className="cards-row">
-           <img src={import.meta.env.BASE_URL + "card-sai.png"} alt="SAI Properties business card" />
-          <img src={import.meta.env.BASE_URL + "card-hikayat.png"} alt="Hikayat Al Sahra Tourism business card" />
+           <img src={import.meta.env.BASE_URL + "card-sai.webp"} alt="SAI Properties business card" loading="lazy" />
+<img src={import.meta.env.BASE_URL + "card-hikayat.webp"} alt="Hikayat Al Sahra Tourism business card" loading="lazy" />
           </Reveal>
         </div>
       </section>
