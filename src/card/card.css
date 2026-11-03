@@ -23,7 +23,8 @@ body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:line
 .btn{display:flex;align-items:center;gap:14px;width:100%;padding:11px 14px;border:0;border-radius:18px;background:#fff;color:var(--ink);font:inherit;text-decoration:none;text-align:left;cursor:pointer;box-shadow:0 6px 16px rgba(30,60,110,.12);transition:transform .22s,box-shadow .22s;opacity:0;animation:rise .55s cubic-bezier(.2,.8,.2,1) forwards;-webkit-tap-highlight-color:transparent}
 .btn:hover,.btn:focus-visible{transform:translateY(-3px) scale(1.015);box-shadow:0 14px 26px rgba(30,60,110,.2);outline:none}
 .btn:active{transform:scale(.98)}
-.ic{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;color:#fff;flex:none;transition:transform .25s}
+  .ic{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;color:#fff;flex:none;transition:transform .25s}
+  .ic svg{width:30px;height:30px}
 .btn:hover .ic{transform:rotate(-8deg) scale(1.08)}
 .lbl{flex:1;font-weight:800;font-size:16px}
 .chev{color:#3b6fcf;display:grid;transition:transform .22s}
@@ -42,6 +43,6 @@ body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:line
   .card{max-width:560px;padding:40px 36px 30px;background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);border-radius:34px;box-shadow:0 30px 70px rgba(11,31,58,.22)}
   .photo{width:156px;height:156px}.name{font-size:32px}.role{font-size:17px}.company{font-size:14px}.tag{font-size:15px;max-width:380px}
   .mark{width:52px;height:52px;font-size:22px}.wordmark{font-size:28px}
-  .btn{padding:13px 18px}.ic{width:48px;height:48px}.lbl{font-size:17px}
+  .btn{padding:14px 18px}.ic{width:64px;height:64px;border-radius:18px}.ic svg{width:34px;height:34px}.lbl{font-size:18px}
 }
 @media (prefers-reduced-motion:reduce){.card,.photo,.btn{animation:none;opacity:1}.btn,.ic,.chev{transition:none}}

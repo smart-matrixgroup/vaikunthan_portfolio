@@ -20,13 +20,11 @@ function saveContact() {
 // order: Save Contact, Personal Portfolio, Website, WhatsApp, Instagram, LinkedIn, Location, Google Review
 const buttons = [
   { label: 'Save Contact', icon: I.User, cls: 'c-blue', onClick: saveContact },
-  { label: 'Personal Portfolio', icon: I.Briefcase, cls: 'c-gold', href: LINKS.portfolio },
-  { label: 'Website', icon: I.Globe, cls: 'c-navy', href: LINKS.website },
+  { label: 'My Site', icon: I.Briefcase, cls: 'c-gold', href: LINKS.portfolio },
   { label: 'WhatsApp', icon: I.Chat, cls: 'c-green', href: LINKS.whatsapp },
   { label: 'Instagram', icon: I.Insta, cls: 'c-insta', href: LINKS.instagram },
   { label: 'LinkedIn', icon: I.Linkedin, cls: 'c-linkedin', href: LINKS.linkedin },
-  { label: 'Location', icon: I.Pin, cls: 'c-red', href: LINKS.location },
-  { label: 'Google Review', icon: I.Star, cls: 'c-amber', href: LINKS.review },
+ 
 ]
 
 function ActionButton({ label, icon: Icon, cls, href, onClick, i }) {
