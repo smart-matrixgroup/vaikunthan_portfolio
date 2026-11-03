@@ -4,4 +4,6 @@
 3. npm run dev     -> preview in browser
 4. npm run build   -> upload the "dist" folder to Netlify / Vercel / any hosting
 
-Content: top of src/App.jsx   |   Photo: public/profile.png   |   Colours: :root in src/styles.css
+Content: top of src/App.jsx   |   Photo: public/person.webp   |   Colours: :root in src/styles.css
+
+
